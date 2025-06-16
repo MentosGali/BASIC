@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="./css/todo.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap: 20px;
+        "
+      >
+        <h2 style="margin: 0; font-family: Verdana, Geneva, Tahoma, sans-serif">
+          TO-DO LIST
+        </h2>
+        <a
+          href="index.html"
+          style="
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            background-color: bisque;
+            border-radius: 5px;
+            padding: 3px;
+            color: black;
+            font-size: 1.3rem;
+          "
+          >Back</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="left">
+        <div class="formulario">
+          <form id="task-form">
+            <div class="form-group">
+              <label for="task-name">Name task:</label>
+              <input type="text" id="task-name" name="task_name" />
+            </div>
+
+            <div class="form-group">
+              <label for="task-difficulty">Difficulty:</label>
+              <select id="task-difficulty" name="task_difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="task-date">Due date:</label>
+              <input type="date" id="task-date" name="task_date" />
+            </div>
+
+            <button type="submit">Save Task</button>
+          </form>
+        </div>
+
+        <div class="info">
+          <p>Created by MentosDev</p>
+          <p>
+            <a href="game.mendez447@gmai.com">Email</a> |
+            <a href="https://github.com/MentosGali">GitHub</a>
+          </p>
+          <p>© 2025 Gama's Portfolio</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="pizarra">
+          <table id="tareas">
+            <tr>
+              <th>Name</th>
+              <th>Difficulty</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <script src="/js/todo.js" defer></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: radial-gradient(circle at right, #fff8f8, #cfeaff);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Calculadora centrada y adaptada con grid */
+.calculator {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "info info info info"
+    "display display display display"
+    "result result result result"
+    "clear divide multiply subtract"
+    "seven eight nine add"
+    "four five six add"
+    "one two three equals"
+    "delete zero decimal equals";
+  gap: 10px;
+  width: 80vw;
+}
+
+/* Pantallas de entrada y resultado */
+#display,
+#result {
+  grid-area: display;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#result {
+  grid-area: result;
+}
+
+/* Botones generales */
+button {
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #63a3d655;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  border: #958ad13d 1px solid;
+}
+
+button:hover {
+  background-color: #0c3957;
+  color: white;
+}
+
+.info {
+  grid-area: info;
+}
+/* Áreas específicas del grid */
+.title {
+  grid-area: title;
+}
+
+.display {
+  grid-area: display;
+}
+
+.clear {
+  grid-area: clear;
+}
+.divide {
+  grid-area: divide;
+}
+.multiply {
+  grid-area: multiply;
+}
+.subtract {
+  grid-area: subtract;
+}
+.add {
+  grid-area: add;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.equals {
+  grid-area: equals;
+}
+
+.delete {
+  grid-area: delete;
+}
+
+/* Ajustes responsive */
+@media (max-width: 600px) {
+  .calculator {
+    width: 95vw;
+    font-size: 0.9rem;
+  }
+
+  #display,
+  #result {
+    font-size: 1rem;
+    color: black;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 0;
+  border: none;
+  color: rgb(13, 67, 117);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between; /* ✅ esto es lo importante */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem; /* opcional para dar margen interior */
+}
+
+input {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.volver {
+  margin-top: 30px;
+  display: block;
+  padding: 5px;
+  background-color: rgba(182, 162, 245, 0.879);
+  border-radius: 30px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}

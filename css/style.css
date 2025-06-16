@@ -1,0 +1,90 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+  gap: 10px;
+  padding: 5px;
+  width: 100%;
+}
+/* Tablet (de 426px a 768px aprox) */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      " card1 card2 "
+      " card3 card4 "
+      " card5 card6 ";
+  }
+}
+
+@media (max-width: 425px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6";
+  }
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #e0eafc, #ffe2ed);
+}
+
+.container {
+  padding: 20px;
+  width: 85vw;
+  max-width: 95vw;
+  margin: 0 auto;
+  background-color: #f8f8fd;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.projects {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  border: 1px solid rgb(192, 198, 250);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2px 2px 2px 3px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 1px;
+  border: 0px;
+}

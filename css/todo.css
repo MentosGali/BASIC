@@ -1,0 +1,149 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: radial-gradient(circle at right, #fff8f8, #f3faff);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-top: 10vb;
+}
+
+main {
+  width: 80vw;
+  max-width: 90vw;
+  background-color: rgb(220, 237, 252);
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-top: 1vb;
+  display: flex;
+  gap: 20px; /* Espacio entre las columnas */
+  padding: 20px; /* Espacio interno */
+  min-height: 70vh; /* Altura mínima */
+
+  margin-bottom: 10vb;
+}
+
+.left {
+  width: 30%; /* Aumenté el ancho para mejor visualización del formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: saddlebrown 1px solid;
+}
+
+.right {
+  width: 70%;
+  overflow-x: auto; /* Para manejar tablas anchas */
+  border: #210a4d 1px solid;
+}
+
+.formulario {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 2vh;
+}
+
+.form-group {
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 15px; /* Espacio entre campos */
+}
+
+label {
+  width: 100px; /* Ancho fijo para los labels */
+  text-align: right; /* Alinea el texto a la derecha */
+  margin-right: 5px; /* Espacio entre label e input */
+}
+
+input,
+select {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+button {
+  margin-left: 130px; /* Alineado con los inputs */
+  padding: 10px 20px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3143a7;
+  color: white;
+}
+
+.pizarra {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Estilos para la tabla */
+#tareas {
+  width: 100%;
+  border-collapse: separate; /* Permite bordes independientes */
+  border-spacing: 0; /* Elimina espacios entre celdas */
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+
+  padding-bottom: 10px;
+}
+
+#tareas tr {
+  background-color: #ffffff; /* Color de fondo que ya tenías */
+  border: 1px solid #210a4d; /* Borde exterior para la fila */
+}
+
+#tareas th,
+#tareas td {
+  padding: 12px 15px;
+  border: 1px solid #83adeb; /* Borde entre celdas */
+  text-align: left;
+}
+
+#tareas th {
+  background-color: #2f729e; /* Color de encabezado */
+  color: white;
+  font-weight: bold;
+}
+
+#tareas tr:hover {
+  background-color: #6e7daf; /* Efecto hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  color: rgb(255, 255, 255);
+}
+
+.infoo {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 5px;
+  text-align: center;
+}
